@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Jost:wght@300;400&family=Merriweather&family=Rubik&display=swap" rel="stylesheet">
+    <script src="scipt.js" defer></script>
+    <title>Search Movie</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+     
+ 
+       .box{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 30px;
+            width: 100%;
+            height: 90px;
+           
+       }
+
+        body{
+            font-size: 1rem;
+            background-image: url("https://wallpaperaccess.com/full/2037845.png");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;   
+            font-family: 'Rubik', sans-serif;
+           
+        }
+        form{
+            
+            padding: 60px 70px;
+            color: aliceblue;
+            border-radius: 3px;
+            width: 65%;
+        }
+        #btn{
+            margin-left: 7rem;
+            width: 40%;
+            height: 40px;
+            border: none;
+            border-radius: 3px;
+            background-color:rgba(238, 49, 49, 0.747);
+            color:aliceblue
+        }   
+        input{
+            height: 40px;
+            border-radius: 2px;
+            border: none;
+            outline: none;
+            width: 100%;
+        } 
+
+        /* card style */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+ 
+       .card {
+            display: flex;
+            
+            border: 1px solid #cccccce3;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 200px;
+        }
+
+  
+        .image {
+          flex: 1;
+          max-width: 30%;
+          padding: 10px;
+        }
+
+       .image img {
+           max-width: 100%;
+           height: auto;
+       }
+      .text {
+          flex: 1;
+          max-width: 70%;
+          padding: 10px;
+          background: transparent;
+          border-radius: 10px 10px ;
+          color: aliceblue;
+       }
+       .movie-container {
+        font-size: 0.7rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+        height: 30px;
+        justify-items: center;
+        align-items: start;
+       }
+      .error-box {
+        color: aliceblue;
+        text-align: center;
+        margin: 20px;
+      }  
+       #drop-down{
+        margin-left: 30px;
+        height: 40px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    width: 15%;
+    }
+       
+    </style>
+</head>
+<body>
+   
+    <div class="main">
+       <form id="searchMovie">
+            
+            <div class="box"> 
+                <input type="text" id="title" placeholder="  Search for movie....">
+                <select id="drop-down">
+                    <option value="">Sort by Year</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+
+                </select>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div>
+        <div class="movie-container" id="box"></div>
+        <div id="errorBox" class="error-box"></div>
+    </div>
+
+</body>
+</html>
